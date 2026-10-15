@@ -1,0 +1,44 @@
+#ifndef TABLERESERVATION_H
+#define TABLERESERVATION_H
+
+#include <QString>
+#include <QDateTime>
+#include <QMetaType>
+#include <optional>
+
+#include "hotel/reservationstab/Reservation/reservation.h"
+#include "hotel/restaurantwindow/TableReservations/ReservationStatus.h"
+#include "hotel/restaurantwindow/reservetable/timeBlock.h"
+
+struct TableReservation {
+    QString ReservationID;
+
+    // Guest details
+    QString guestName;
+    QString guestEmail;
+    QString guestPhoneNumber;
+    QString roomNumber = "";
+
+    // Reservation details
+    int numberOfGuests = 1;
+    int tableNumber = 1; // Should be between 1 and 31
+    QDateTime reservationDateTime;
+    TimeBlock timeBlock = TimeBlock::Evening;
+    int durationMinutes = 120; // not needed but leave it in to not mess up other code
+
+    std::optional<Reservation> hotelReservation;
+
+    // Extra info
+    ReservationStatus status = ReservationStatus::Confirmed;
+    QString specialRequests;
+    QDateTime createdAt = QDateTime::currentDateTime();
+
+    // Helper functions
+    QDateTime endDateTime() const { // not needed but leave it in to not mess up other code
+        return reservationDateTime.addSecs(durationMinutes * 60);
+    }
+};
+
+Q_DECLARE_METATYPE(TableReservation);
+
+#endif // TABLERESERVATION_H

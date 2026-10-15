@@ -1,0 +1,6 @@
+0000000000000000000000000000000000000000 c9fed93d8cceaf7346c90bcf1edf559063682252 SvenPrince <sven.prince@proton.me> 1789654594 +0200	branch: Created from main
+c9fed93d8cceaf7346c90bcf1edf559063682252 c0ce03b525b1659a389ca263b2b400d9df80c251 SvenPrince <sven.prince@proton.me> 1789655452 +0200	commit: Enum uitgebreid table.h
+c0ce03b525b1659a389ca263b2b400d9df80c251 1496d3078a031adb2146c7b1d9e9015eff5a3cb2 SvenPrince <sven.prince@proton.me> 1789655807 +0200	commit: Terrastafels OOO gezet en select randje zwart gemaakt
+1496d3078a031adb2146c7b1d9e9015eff5a3cb2 fd524c9275ed99151346591ed2aa6df339c2e111 SvenPrince <sven.prince@proton.me> 1789656220 +0200	commit: OutofOrder knop gemaakt functional
+fd524c9275ed99151346591ed2aa6df339c2e111 14b6c00dbbf635c0014f71af65f9d78176c5d9fc SvenPrince <sven.prince@proton.me> 1789656508 +0200	commit: bug opgelost met TableCanvas import in .h
+14b6c00dbbf635c0014f71af65f9d78176c5d9fc f3b165f78121eb0fd417bcb27cfbb388ca066749 SvenPrince <sven.prince@proton.me> 1789656718 +0200	commit: Edge cases, waarschuwingen check en popups gemaakt voor out of service tafels

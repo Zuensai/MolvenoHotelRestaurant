@@ -1,0 +1,501 @@
+#include "hotel/restaurantwindow/restaurantwindow.h"
+#include "hotel/restaurantwindow/reservetable/timeBlock.h"
+
+#include "hotel/restaurantwindow/TableCanvas/tablecanvas.h"
+
+#include <QVBoxLayout>
+#include <QHBoxLayout>
+#include <QLabel>
+#include <QHeaderView>
+#include <QRandomGenerator>
+#include <QPainter>
+#include <QDate>
+#include <QTimer>
+
+#include <QMessageBox>
+#include <cmath>
+
+#include <qevent.h>
+#include <qstandarditemmodel.h>
+
+#include "hotel/restaurantwindow/reservetable/reservetable.h"
+
+#include <QScrollArea>
+
+#include <QDebug>
+
+RestaurantWindow::RestaurantWindow(QWidget *parent)
+    : QWidget(parent), ui(nullptr)
+{
+    //loadMockTables();
+    setupLayout();
+    tables = *(canvasPointer->getTables());
+    setupReservationTable();
+
+    // Timer for periodic refresh every 60 seconds
+    QTimer *refreshTimer = new QTimer(this);
+    connect(refreshTimer, &QTimer::timeout, this, [this]() {
+        auto reservations = reservetable::getAllTableReservations();
+        populateReservationTable(reservations);
+    });
+    refreshTimer->start(60000);
+
+
+}
+
+RestaurantWindow::~RestaurantWindow()
+{
+}
+
+void RestaurantWindow::setupLayout()
+{
+    // Main layout
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setSpacing(0);
+
+    // Create splitter (30% left, 70% right)
+    mainSplitter = new QSplitter(Qt::Horizontal);
+
+    // ===== LEFT PANEL (30%) =====
+    setupLeftPanel();
+    mainSplitter->addWidget(leftPanel);
+
+    // ===== RIGHT PANEL (70%) =====
+    setupRightPanel();
+    mainSplitter->addWidget(rightPanel);
+
+    // Set splitter sizes (45/55)
+    mainSplitter->setSizes(QList<int>() << 450 << 550);
+    mainSplitter->setStretchFactor(0, 1);
+    mainSplitter->setStretchFactor(1, 1);
+
+    mainLayout->addWidget(mainSplitter);
+    setLayout(mainLayout);
+}
+
+void RestaurantWindow::setupLeftPanel()
+{
+    leftPanel = new QWidget();
+    QVBoxLayout *leftLayout = new QVBoxLayout(leftPanel);
+    leftLayout->setContentsMargins(10, 10, 10, 10);
+    leftLayout->setSpacing(10);
+
+    // === Reserveringen Tabel ===
+    QLabel *reserveLabel = new QLabel("Reservations");
+    reserveLabel->setStyleSheet("font-weight: bold; font-size: 12px;");
+    leftLayout->addWidget(reserveLabel);
+
+    reservationTable = new QTableWidget();
+    reservationTable->setColumnCount(5);
+    reservationTable->setHorizontalHeaderLabels(QStringList() << "Name" << "Table" << "Guests" << "Date" << "Time Block");
+
+    QHeaderView *header = reservationTable->horizontalHeader();
+    header->setSectionResizeMode(0, QHeaderView::Stretch);
+    header->setSectionResizeMode(1, QHeaderView::ResizeToContents);
+    header->setSectionResizeMode(2, QHeaderView::ResizeToContents);
+    header->setSectionResizeMode(3, QHeaderView::ResizeToContents);
+    header->setSectionResizeMode(4, QHeaderView::ResizeToContents);
+
+    reservationTable->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    reservationTable->verticalHeader()->setDefaultSectionSize(35);
+
+    reservationTable->setEditTriggers(QAbstractItemView::NoEditTriggers);   // Make table fields itself non-editable
+    reservationTable->setSelectionBehavior(QAbstractItemView::SelectRows);  // Clicking any cell highlights whole row
+    reservationTable->setSelectionMode(QAbstractItemView::SingleSelection); // User can only select one row at a time
+    reservationTable->horizontalHeader()->setSectionsClickable(false);      // User cannot click a column header to highlight all rows beneath it
+    reservationTable->verticalHeader()->setVisible(false);                  // Cannot see row numbers
+
+    setupReservationTable();
+    leftLayout->addWidget(reservationTable);
+    connect(reservationTable, &QTableWidget::doubleClicked, this, &RestaurantWindow::onViewReservationClicked);
+
+
+    // === Bekijk Reservering Details Button ===
+    viewReservationBtn = new QPushButton("Reservation Details");
+    viewReservationBtn->setFixedHeight(35);
+    connect(viewReservationBtn, &QPushButton::clicked, this, &RestaurantWindow::onViewReservationClicked);
+    leftLayout->addWidget(viewReservationBtn);
+
+    leftPanel->setLayout(leftLayout);
+}
+
+void RestaurantWindow::setupRightPanel()
+{
+    rightPanel = new QWidget();
+    rightPanel->setStyleSheet("background-color: #F8F9FA;");
+
+    QVBoxLayout *rightLayout = new QVBoxLayout(rightPanel);
+    rightLayout->setContentsMargins(10, 10, 10, 10);
+    rightLayout->setSpacing(10);
+
+    // === Top Button Bar ===
+    QHBoxLayout *topButtonLayout = new QHBoxLayout();
+    topButtonLayout->setSpacing(10);
+
+    setFreeBtn = new QPushButton("Free");
+    setFreeBtn->setStyleSheet("background-color: #2ECC71; color: #1E1E24; padding: 10px; font-weight: bold; border-radius: 5px;");
+    setFreeBtn->setFixedHeight(40);
+    connect(setFreeBtn, &QPushButton::clicked, this, &RestaurantWindow::onSetFreeClicked);
+    topButtonLayout->addWidget(setFreeBtn);
+
+    setOccupiedBtn = new QPushButton("Occupied");
+    setOccupiedBtn->setStyleSheet("background-color: #D9534F; color: #F5F5F5; padding: 10px; font-weight: bold; border-radius: 5px;");
+    setOccupiedBtn->setFixedHeight(40);
+    connect(setOccupiedBtn, &QPushButton::clicked, this, &RestaurantWindow::onSetOccupiedClicked);
+    topButtonLayout->addWidget(setOccupiedBtn);
+
+    reservationTableBtn = new QPushButton("Reserved");
+    reservationTableBtn->setStyleSheet("background-color: #E69F00; color: #F5F5F5; padding: 10px; font-weight: bold; border-radius: 5px;");
+    reservationTableBtn->setFixedHeight(40);
+    connect(reservationTableBtn, &QPushButton::clicked, this, &RestaurantWindow::onReservationTableClicked);
+    topButtonLayout->addWidget(reservationTableBtn);
+
+    outOfServiceBtn = new QPushButton("Out of Service");
+    outOfServiceBtn->setStyleSheet("background-color: #808080; color: #F5F5F5; padding: 10px; font-weight: bold; border-radius: 5px;");
+    outOfServiceBtn->setFixedHeight(40);
+    connect(outOfServiceBtn, &QPushButton::clicked, this, &RestaurantWindow::onSetOutOfServiceClicked);
+    topButtonLayout->addWidget(outOfServiceBtn);
+
+    topButtonLayout->addStretch();
+    rightLayout->addLayout(topButtonLayout);
+
+    tableCanvas = new TableCanvas(tables);
+    canvasPointer = qobject_cast<TableCanvas*>(tableCanvas);
+    tableCanvas->setStyleSheet("background-color: #F8F9FA; border: 2px solid #2D2D35;");
+
+    QScrollArea *scrollArea = new QScrollArea(this);
+    scrollArea->setWidget(tableCanvas);
+    scrollArea->setWidgetResizable(true); // Allows canvas to expand automatically when window expands
+    tableCanvas->setStyleSheet("background-color: #F8F9FA; border: 2px solid #2D2D35;");
+
+    rightLayout->addWidget(scrollArea);
+    rightPanel->setLayout(rightLayout);
+}
+
+void RestaurantWindow::populateReservationTable(const QVector<TableReservation>& reservations)
+{
+    reservationTable->setRowCount(0);
+
+    QVector<TableReservation> sortedReservations = reservations;
+    std::sort(sortedReservations.begin(), sortedReservations.end(),
+              [](const TableReservation& a, const TableReservation& b) {
+                  QDate dateA = a.reservationDateTime.date();
+                  QDate dateB = b.reservationDateTime.date();
+
+                  if (dateA != dateB) {
+                      return dateA < dateB;
+                  }
+                  return static_cast<int>(a.timeBlock) < static_cast<int>(b.timeBlock);
+              }
+              );
+
+    // Reset active tables to FREE (preserve OCCUPIED and OUT_OF_SERVICE)
+    for (Table &table : tables) {
+        if (table.getStatus() != TableStatus::OCCUPIED &&
+            table.getStatus() != TableStatus::OUT_OF_SERVICE) {
+            table.setStatus(TableStatus::FREE);
+        }
+    }
+
+    //  Mark table as RESERVED ONLY if date IS today AND block IS current block
+    for (const TableReservation& res : sortedReservations) {
+        QDate resDate = res.reservationDateTime.date();
+
+        // Skip reservations where the time block has already passed
+        if (isTimeBlockPassed(resDate, res.timeBlock)) {
+            continue;
+        }
+
+        // Insert row into the UI reservationTable
+        int row = reservationTable->rowCount();
+        reservationTable->insertRow(row);
+        reservationTable->setItem(row, 0, new QTableWidgetItem(res.guestName));
+        reservationTable->setItem(row, 1, new QTableWidgetItem(QString::number(res.tableNumber)));
+        reservationTable->setItem(row, 2, new QTableWidgetItem(QString::number(res.numberOfGuests)));
+        reservationTable->setItem(row, 3, new QTableWidgetItem(res.reservationDateTime.toString("dd-MM-yyyy")));
+        reservationTable->setItem(row, 4, new QTableWidgetItem(timeBlockToString(res.timeBlock)));
+
+        // Set physical table to RESERVED ONLY if it is active right now
+        if (isReservationActiveNow(resDate, res.timeBlock)) {
+            int tableIndex = res.tableNumber - 1;
+            if (tableIndex >= 0 && tableIndex < tables.size()) {
+                if (tables[tableIndex].getStatus() != TableStatus::OCCUPIED &&
+                    tables[tableIndex].getStatus() != TableStatus::OUT_OF_SERVICE) {
+                    tables[tableIndex].setStatus(TableStatus::RESERVED);
+                }
+            }
+        }
+    }
+
+    // Persist and refresh canvas UI
+    if (canvasPointer) {
+        canvasPointer->updateTables(tables);
+        canvasPointer->update();
+    }
+}
+
+void RestaurantWindow::setupReservationTable()
+{
+    // reservationTable->setRowCount(0); // Ensure table starts clean
+    auto reservations = reservetable::getAllTableReservations();
+    populateReservationTable(reservations);
+}
+
+void RestaurantWindow::loadMockTables()
+{
+    tables.clear();
+
+    const int columns = 5;
+    const int itemSpacingX = 75;
+    const int itemSpacingY = 55;
+
+    // =========================
+    // BINNEN - tafels 1 t/m 15
+    // =========================
+    for (int i = 1; i <= 15; ++i) {
+
+        int index = i - 1;
+
+        int x = 30 + (index % columns) * itemSpacingX;
+        int y = 50 + (index / columns) * itemSpacingY;
+
+        int randomStatus = QRandomGenerator::global()->bounded(3);
+
+        TableStatus status;
+
+        if (randomStatus == 0)
+            status = TableStatus::FREE;
+        else if (randomStatus == 1)
+            status = TableStatus::OCCUPIED;
+        else
+            status = TableStatus::RESERVED;
+
+        tables.append(Table(i, x, y, status));
+    }
+
+
+    // =========================
+    // TERRAS - tafels 16 t/m 31
+    // =========================
+    for (int i = 16; i <= 31; ++i) {
+
+        int index = i - 16;
+
+        int x = 30 + (index % columns) * itemSpacingX;
+        int y = 250 + (index / columns) * itemSpacingY;
+
+        TableStatus status = TableStatus::OUT_OF_SERVICE;
+
+        tables.append(Table(i, x, y, status));
+
+        // int randomStatus = QRandomGenerator::global()->bounded(3);
+
+        // TableStatus status;
+
+        // if (randomStatus == 0)
+        //     status = TableStatus::FREE;
+        // else if (randomStatus == 1)
+        //     status = TableStatus::OCCUPIED;
+        // else
+        //     status = TableStatus::RESERVED;
+
+        // tables.append(Table(i, x, y, status));
+    }
+}
+
+QVector<Table>* RestaurantWindow::getTables(){
+    return this->canvasPointer->getTables();
+}
+
+QTableWidget* RestaurantWindow::getReservationTable(){
+    return reservationTable;
+}
+
+// Slots
+void RestaurantWindow::onDataChanged()
+{
+    // TODO: Implementatie
+}
+
+void RestaurantWindow::onViewReservationClicked()
+{
+    reservationDetailsDialog = new RestaurantReservationsDetailsDialog(this);
+    reservationDetailsDialog->show();
+}
+
+void RestaurantWindow::onSetFreeClicked()
+{
+    int selectedTable = canvasPointer->getSelectedTable();
+
+    if(selectedTable > 0 && tables[selectedTable - 1].getStatus() == TableStatus::OUT_OF_SERVICE){
+        QMessageBox::warning(
+            this,
+            "Can't set to Free",
+            "This table is out of service."
+            );
+    }
+    else if(selectedTable > 0){
+        bool hasActiveReservationNow = false;
+
+        for(int r = 0; r < reservationTable->model()->rowCount(); r++){
+            int reservationTableNumber = stoi(reservationTable->item(r, 1)->text().toStdString());
+            QDate reservationDate = QDate::fromString(reservationTable->item(r, 3)->text(), "dd-MM-yyyy");
+            TimeBlock reservationTimeBlock = stringToTimeBlock(reservationTable->item(r, 4)->text());
+
+            if (selectedTable == reservationTableNumber &&
+                reservationDate == QDate::currentDate() &&
+                reservationTimeBlock == getCurrentTimeBlock()) {
+
+                hasActiveReservationNow = true;
+                break;
+            }
+        }
+
+        // Sets table to Reserved if there is a reservation, otherwise set it to Free
+        tables[selectedTable - 1].setStatus(hasActiveReservationNow ? TableStatus::RESERVED : TableStatus::FREE);
+        canvasPointer->updateTables(tables);
+        canvasPointer->update();
+    }
+    else{
+        QMessageBox::warning(this, "No Table Selected", "Please select a table first.");
+    }
+}
+
+void RestaurantWindow::onSetOccupiedClicked()
+{
+    int selectedTable = canvasPointer->getSelectedTable();
+    if(selectedTable > 0 && tables[selectedTable - 1].getStatus() == TableStatus::OUT_OF_SERVICE){
+        QMessageBox::warning(
+            this,
+            "Can't set to Occupied",
+            "This table is out of service."
+            );
+    }
+    else if(selectedTable > 0){
+        tables[selectedTable - 1].setStatus(TableStatus::OCCUPIED);
+        canvasPointer->updateTables(tables);
+        canvasPointer->update();
+    }else{
+        QMessageBox::warning(this, "No Table Selected", "Please select a table first.");
+    }
+}
+
+void RestaurantWindow::onSetOutOfServiceClicked()
+{
+    int selectedTable = canvasPointer->getSelectedTable();
+
+    if(selectedTable > 0){
+
+        // Check if this table has an active (non-expired) reservation
+        for (int r = 0; r < reservationTable->rowCount(); r++) {
+            int tableNumber = reservationTable->item(r, 1)->text().toInt();
+
+            if (selectedTable == tableNumber) {
+                QDate resDate = QDate::fromString(reservationTable->item(r, 3)->text(), "dd-MM-yyyy");
+                TimeBlock resBlock = stringToTimeBlock(reservationTable->item(r, 4)->text());
+
+                // if table == expired, ignore it
+                if (isTimeBlockPassed(resDate, resBlock)) {
+                    continue;
+                }
+
+                QMessageBox::warning(
+                    this,
+                    "Table Reserved",
+                    "This table is reserved, please move the reservation before completing this action"
+                    );
+                return;
+            }
+        }
+
+        if(tables[selectedTable - 1].getStatus() == TableStatus::OUT_OF_SERVICE){
+            tables[selectedTable - 1].setStatus(TableStatus::FREE);
+            canvasPointer->updateTables(tables);
+            canvasPointer->update();
+        }
+        else{
+            // Table is not reserved, ask for confirmation
+            QMessageBox::StandardButton reply = QMessageBox::question(
+                this,
+                "Out of Service",
+                "Are you sure this table is out of service?",
+                QMessageBox::Yes | QMessageBox::No
+                );
+
+            if(reply == QMessageBox::Yes){
+                tables[selectedTable - 1].setStatus(TableStatus::OUT_OF_SERVICE);
+                canvasPointer->updateTables(tables);
+                canvasPointer->update();
+            }
+        }
+
+    }else{
+        QMessageBox::warning(
+            this,
+            "No Table Selected",
+            "Please select a table first."
+            );
+    }
+}
+
+void RestaurantWindow::onReservationTableClicked()
+{
+    int selectedTable = canvasPointer ? canvasPointer->getSelectedTable() : 0;
+
+    reservetable dialog(this);
+    if (selectedTable > 0) {
+        dialog.setTable(selectedTable);
+    }else{
+        tableCanvas->setTableToDefault();
+        selectedTable = 1;
+        dialog.setTable(1);
+    }
+
+    if(selectedTable > 0 && tables[selectedTable - 1].getStatus() == TableStatus::OUT_OF_SERVICE){
+        QMessageBox::warning(
+            this,
+            "Reserving not possible",
+            "This table is out of service."
+            );
+    }
+    else if (dialog.exec() == QDialog::Accepted) {
+        std::vector<QString> data = dialog.getdata();
+        // Index 0: Name, 1: Table, 2: Guests, 3: Date (dd-MM-yyyy), 4: TimeBlock
+
+        QDate resDate = QDate::fromString(data[3], "dd-MM-yyyy");
+        TimeBlock resBlock = stringToTimeBlock(data[4]);
+
+        if (isTimeBlockPassed(resDate, resBlock)) {
+            QMessageBox::warning(this, "Invalid Time", "Cannot create a reservation for a time block that has already passed.");
+            return;
+        }
+
+        int row = reservationTable->rowCount();
+        reservationTable->insertRow(row);
+        reservationTable->setItem(row, 0, new QTableWidgetItem(data[0])); // Name
+        reservationTable->setItem(row, 1, new QTableWidgetItem(data[1])); // Table
+        reservationTable->setItem(row, 2, new QTableWidgetItem(data[2])); // Guests
+        reservationTable->setItem(row, 3, new QTableWidgetItem(data[3])); // Date
+        reservationTable->setItem(row, 4, new QTableWidgetItem(data[4])); // Time Block String
+
+        setupReservationTable();
+
+        if (canvasPointer && canvasPointer->getTables()) {
+            tables = *(canvasPointer->getTables());
+            canvasPointer->update();
+        }
+    }
+}
+
+bool RestaurantWindow::isReservationActiveNow(const QDate &date, TimeBlock block)
+{
+    // Must be today
+    if (date != QDate::currentDate()) {
+        return false;
+    }
+    // Must match current time block
+    return block == getCurrentTimeBlock();
+}
+
+#include "restaurantwindow.moc"

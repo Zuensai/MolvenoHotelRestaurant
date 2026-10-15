@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 bec42550a95c880ae0112752634cbb6ee894ef12 SvenPrince <sven.prince@proton.me> 1788425976 +0200	branch: Created from refs/remotes/origin/101-1-basislayout-van-beginscherm
+bec42550a95c880ae0112752634cbb6ee894ef12 d852682fdfc8a6b39215e4427e38d51cf74b2bfc SvenPrince <sven.prince@proton.me> 1788427589 +0200	commit: Add restaurant window
+d852682fdfc8a6b39215e4427e38d51cf74b2bfc 2dde8cd5aa6c86222574837d10abf58803fc1761 SvenPrince <sven.prince@proton.me> 1788427615 +0200	rebase (finish): refs/heads/101-1-basislayout-van-beginscherm onto fb07550eee4f93fe574ce5db30276445e19bc22a
+2dde8cd5aa6c86222574837d10abf58803fc1761 b19ff7ea332a48fd6ed65f21b08e0da0537f7c25 SvenPrince <sven.prince@proton.me> 1788433273 +0200	commit: Add HomePage - layout
+b19ff7ea332a48fd6ed65f21b08e0da0537f7c25 803a3f21e120e2b3e0031065c0062fe0a8e13594 SvenPrince <sven.prince@proton.me> 1788434786 +0200	commit: Tafelplattegrond gemaakt
+803a3f21e120e2b3e0031065c0062fe0a8e13594 3eb62dbe4980cea47cabd870168f468e718607d5 SvenPrince <sven.prince@proton.me> 1788435415 +0200	commit (merge): Merge main into 101-1-basislayout-van-beginscherm
+3eb62dbe4980cea47cabd870168f468e718607d5 23d877d493ac91efbabaf2cf3aa81de813b0d9e3 SvenPrince <sven.prince@proton.me> 1788438804 +0200	pull origin main: Fast-forward

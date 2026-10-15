@@ -1,0 +1,141 @@
+0000000000000000000000000000000000000000 c32a683b09f4cfff62f8271bfd699a649b5f8edc Sven <svenprince94@gmail.com> 1783600476 +0200	clone: from github.com:Team-Impact-organization/molveno-resort-systeem.git
+c32a683b09f4cfff62f8271bfd699a649b5f8edc c32a683b09f4cfff62f8271bfd699a649b5f8edc Sven <svenprince94@gmail.com> 1783600515 +0200	checkout: moving from main to main
+c32a683b09f4cfff62f8271bfd699a649b5f8edc c32a683b09f4cfff62f8271bfd699a649b5f8edc Sven <svenprince94@gmail.com> 1783600533 +0200	checkout: moving from main to remove-molvenoHotel-map
+c32a683b09f4cfff62f8271bfd699a649b5f8edc 4984bbdd66b5f46466fbbb3b792334fb21973316 Sven <svenprince94@gmail.com> 1783600559 +0200	commit: mapje verwijderd, overbodig
+4984bbdd66b5f46466fbbb3b792334fb21973316 c32a683b09f4cfff62f8271bfd699a649b5f8edc Sven <svenprince94@gmail.com> 1783600653 +0200	checkout: moving from remove-molvenoHotel-map to main
+c32a683b09f4cfff62f8271bfd699a649b5f8edc 9ce5a899b0d68db0bea56a0375bda1afeff39833 Sven <svenprince94@gmail.com> 1783600658 +0200	pull: Fast-forward
+9ce5a899b0d68db0bea56a0375bda1afeff39833 9ce5a899b0d68db0bea56a0375bda1afeff39833 Sven <svenprince94@gmail.com> 1783600666 +0200	checkout: moving from main to RoomViewerPagina
+9ce5a899b0d68db0bea56a0375bda1afeff39833 9ce5a899b0d68db0bea56a0375bda1afeff39833 Sven <svenprince94@gmail.com> 1783600672 +0200	checkout: moving from RoomViewerPagina to RoomViewerPagina
+9ce5a899b0d68db0bea56a0375bda1afeff39833 d236b8a0569569a7a70b79c39fb4d629f6e53f0a Sven <svenprince94@gmail.com> 1783603145 +0200	commit: RoomsTab aangevuldgit add .git add .git add .git add .
+d236b8a0569569a7a70b79c39fb4d629f6e53f0a 9ce5a899b0d68db0bea56a0375bda1afeff39833 Sven <svenprince94@gmail.com> 1784189880 +0200	checkout: moving from RoomViewerPagina to main
+9ce5a899b0d68db0bea56a0375bda1afeff39833 9ce5a899b0d68db0bea56a0375bda1afeff39833 Sven <svenprince94@gmail.com> 1784189991 +0200	reset: moving to HEAD
+9ce5a899b0d68db0bea56a0375bda1afeff39833 9ce5a899b0d68db0bea56a0375bda1afeff39833 Sven <svenprince94@gmail.com> 1784190068 +0200	reset: moving to HEAD
+9ce5a899b0d68db0bea56a0375bda1afeff39833 6437a3caa973bcd692ca477d88768fa190cbc2ee Sven <svenprince94@gmail.com> 1784190070 +0200	pull: Fast-forward
+6437a3caa973bcd692ca477d88768fa190cbc2ee 6437a3caa973bcd692ca477d88768fa190cbc2ee Sven <svenprince94@gmail.com> 1784190076 +0200	reset: moving to origin/main
+6437a3caa973bcd692ca477d88768fa190cbc2ee 6437a3caa973bcd692ca477d88768fa190cbc2ee Sven <svenprince94@gmail.com> 1784190166 +0200	checkout: moving from main to RoomPage
+6437a3caa973bcd692ca477d88768fa190cbc2ee 6437a3caa973bcd692ca477d88768fa190cbc2ee Sven <svenprince94@gmail.com> 1784194084 +0200	checkout: moving from RoomPage to main
+6437a3caa973bcd692ca477d88768fa190cbc2ee 6e17307887360171f283d4396f61509b4e6ef162 Sven <svenprince94@gmail.com> 1784194092 +0200	pull origin main: Fast-forward
+6e17307887360171f283d4396f61509b4e6ef162 6437a3caa973bcd692ca477d88768fa190cbc2ee Sven <svenprince94@gmail.com> 1784194101 +0200	checkout: moving from main to RoomPage
+6437a3caa973bcd692ca477d88768fa190cbc2ee 6e17307887360171f283d4396f61509b4e6ef162 Sven <svenprince94@gmail.com> 1784194103 +0200	merge main: Fast-forward
+6e17307887360171f283d4396f61509b4e6ef162 d7669198d7f9014b65823f73cc4013bf55d040ed Sven <svenprince94@gmail.com> 1784195433 +0200	commit: Tabel expands en correcte Excel info
+d7669198d7f9014b65823f73cc4013bf55d040ed d7669198d7f9014b65823f73cc4013bf55d040ed Sven <svenprince94@gmail.com> 1784196057 +0200	checkout: moving from RoomPage to RoomPage
+d7669198d7f9014b65823f73cc4013bf55d040ed d7669198d7f9014b65823f73cc4013bf55d040ed Sven <svenprince94@gmail.com> 1784196087 +0200	reset: moving to d7669198d7f9014b65823f73cc4013bf55d040ed
+d7669198d7f9014b65823f73cc4013bf55d040ed 9527e72ba322726696fa1363d0bb63f6f2a56093 Sven <svenprince94@gmail.com> 1784200446 +0200	commit: tabel is read-only
+9527e72ba322726696fa1363d0bb63f6f2a56093 6e17307887360171f283d4396f61509b4e6ef162 Sven <svenprince94@gmail.com> 1784200533 +0200	checkout: moving from RoomPage to main
+6e17307887360171f283d4396f61509b4e6ef162 6e17307887360171f283d4396f61509b4e6ef162 SvenPrince <sven.prince@proton.me> 1784276051 +0200	checkout: moving from main to main
+6e17307887360171f283d4396f61509b4e6ef162 4d38fb7971307138adddd2127e76ac01143e1794 SvenPrince <sven.prince@proton.me> 1784276344 +0200	pull: Fast-forward
+4d38fb7971307138adddd2127e76ac01143e1794 53c73174bfe518fe485b9518556f05e054345a46 SvenPrince <sven.prince@proton.me> 1787734176 +0200	pull: Fast-forward
+53c73174bfe518fe485b9518556f05e054345a46 53c73174bfe518fe485b9518556f05e054345a46 SvenPrince <sven.prince@proton.me> 1787745815 +0200	checkout: moving from main to SearchRoomsCorrectly
+53c73174bfe518fe485b9518556f05e054345a46 08331a1e04a9d6b4f1ef31e4d8e808431e60f198 SvenPrince <sven.prince@proton.me> 1787745857 +0200	commit: Search rooms correctly
+08331a1e04a9d6b4f1ef31e4d8e808431e60f198 62332aae2c2c328897da8c9bc7713bbef17d7b68 SvenPrince <sven.prince@proton.me> 1787747352 +0200	commit: nu toont hij alleen beschikbare kamers, ipv alle kamers
+62332aae2c2c328897da8c9bc7713bbef17d7b68 fdc5778977c5fcad54b27cba84515206442ac088 SvenPrince <sven.prince@proton.me> 1787748860 +0200	commit: BUG: Edit en dubbelklik werken nu hetzelfde en kunnen kamers veranderen als ze beschikbaar zijn
+fdc5778977c5fcad54b27cba84515206442ac088 e796359fc89643c1498fe4675f20d6e5866a02c5 SvenPrince <sven.prince@proton.me> 1787749341 +0200	commit: opschoning
+e796359fc89643c1498fe4675f20d6e5866a02c5 81fd90d626c7fe22fb21dce381c69c9f2a825cb2 SvenPrince <sven.prince@proton.me> 1787812726 +0200	commit: beschikbare kamers op aantal personen
+81fd90d626c7fe22fb21dce381c69c9f2a825cb2 53c73174bfe518fe485b9518556f05e054345a46 SvenPrince <sven.prince@proton.me> 1787819265 +0200	checkout: moving from SearchRoomsCorrectly to main
+53c73174bfe518fe485b9518556f05e054345a46 81fd90d626c7fe22fb21dce381c69c9f2a825cb2 SvenPrince <sven.prince@proton.me> 1787819401 +0200	checkout: moving from main to SearchRoomsCorrectly
+81fd90d626c7fe22fb21dce381c69c9f2a825cb2 aeb0b206f8c4849b8c0a3f6e4db9256b2486fe36 SvenPrince <sven.prince@proton.me> 1787820386 +0200	commit: dubbelklik schrijft nu ook correct naar Tabel
+aeb0b206f8c4849b8c0a3f6e4db9256b2486fe36 53c73174bfe518fe485b9518556f05e054345a46 SvenPrince <sven.prince@proton.me> 1787820594 +0200	checkout: moving from SearchRoomsCorrectly to main
+53c73174bfe518fe485b9518556f05e054345a46 aeb0b206f8c4849b8c0a3f6e4db9256b2486fe36 SvenPrince <sven.prince@proton.me> 1787820904 +0200	checkout: moving from main to SearchRoomsCorrectly
+aeb0b206f8c4849b8c0a3f6e4db9256b2486fe36 85215cfb4eab3d2e10078493c4479bfafdb81cef SvenPrince <sven.prince@proton.me> 1787821306 +0200	commit: Dubbelklik volledig edit-able gemaakt zoals edit
+85215cfb4eab3d2e10078493c4479bfafdb81cef 53c73174bfe518fe485b9518556f05e054345a46 SvenPrince <sven.prince@proton.me> 1787821317 +0200	checkout: moving from SearchRoomsCorrectly to main
+53c73174bfe518fe485b9518556f05e054345a46 53c73174bfe518fe485b9518556f05e054345a46 SvenPrince <sven.prince@proton.me> 1787822536 +0200	checkout: moving from main to main
+53c73174bfe518fe485b9518556f05e054345a46 9b5ea4806876dde22634e9f10c015ba4a46c0147 SvenPrince <sven.prince@proton.me> 1787822549 +0200	pull origin main: Fast-forward
+9b5ea4806876dde22634e9f10c015ba4a46c0147 d4ed10f6e4daeefa253144f1ae5a92a00a01550c SvenPrince <sven.prince@proton.me> 1787823387 +0200	commit: fix roomRecord bug
+d4ed10f6e4daeefa253144f1ae5a92a00a01550c d4ed10f6e4daeefa253144f1ae5a92a00a01550c SvenPrince <sven.prince@proton.me> 1787823920 +0200	checkout: moving from main to main
+d4ed10f6e4daeefa253144f1ae5a92a00a01550c 1658e7c164d3c902d5d68b0a2139942e9592be57 SvenPrince <sven.prince@proton.me> 1787838477 +0200	commit: Remove LibreOffice lock file
+1658e7c164d3c902d5d68b0a2139942e9592be57 b1c282a1bc76dd7d05386f5e2087db81a4c129e9 SvenPrince <sven.prince@proton.me> 1787915332 +0200	pull: Fast-forward
+b1c282a1bc76dd7d05386f5e2087db81a4c129e9 be34d8b8ebf8c9246645cb70e369babf9005497d SvenPrince <sven.prince@proton.me> 1787918759 +0200	pull: Fast-forward
+be34d8b8ebf8c9246645cb70e369babf9005497d be34d8b8ebf8c9246645cb70e369babf9005497d SvenPrince <sven.prince@proton.me> 1787923512 +0200	checkout: moving from main to BugFix
+be34d8b8ebf8c9246645cb70e369babf9005497d 23ab9a19c76523e116429f7b4db96280f05957b4 SvenPrince <sven.prince@proton.me> 1787923873 +0200	commit: Fixed lakeview bug in room.h
+23ab9a19c76523e116429f7b4db96280f05957b4 810a30194bfdc7d04c54d6a1d2403c17e28a06f0 SvenPrince <sven.prince@proton.me> 1787924142 +0200	commit: Fixed CheckIfFileOpens mismatch
+810a30194bfdc7d04c54d6a1d2403c17e28a06f0 be34d8b8ebf8c9246645cb70e369babf9005497d SvenPrince <sven.prince@proton.me> 1787924154 +0200	checkout: moving from BugFix to main
+be34d8b8ebf8c9246645cb70e369babf9005497d bec42550a95c880ae0112752634cbb6ee894ef12 SvenPrince <sven.prince@proton.me> 1788425976 +0200	checkout: moving from main to 101-1-basislayout-van-beginscherm
+bec42550a95c880ae0112752634cbb6ee894ef12 d852682fdfc8a6b39215e4427e38d51cf74b2bfc SvenPrince <sven.prince@proton.me> 1788427589 +0200	commit: Add restaurant window
+d852682fdfc8a6b39215e4427e38d51cf74b2bfc fb07550eee4f93fe574ce5db30276445e19bc22a SvenPrince <sven.prince@proton.me> 1788427615 +0200	rebase (start): checkout origin/main
+fb07550eee4f93fe574ce5db30276445e19bc22a 2dde8cd5aa6c86222574837d10abf58803fc1761 SvenPrince <sven.prince@proton.me> 1788427615 +0200	rebase (pick): Add restaurant window
+2dde8cd5aa6c86222574837d10abf58803fc1761 2dde8cd5aa6c86222574837d10abf58803fc1761 SvenPrince <sven.prince@proton.me> 1788427615 +0200	rebase (finish): returning to refs/heads/101-1-basislayout-van-beginscherm
+2dde8cd5aa6c86222574837d10abf58803fc1761 b19ff7ea332a48fd6ed65f21b08e0da0537f7c25 SvenPrince <sven.prince@proton.me> 1788433273 +0200	commit: Add HomePage - layout
+b19ff7ea332a48fd6ed65f21b08e0da0537f7c25 803a3f21e120e2b3e0031065c0062fe0a8e13594 SvenPrince <sven.prince@proton.me> 1788434786 +0200	commit: Tafelplattegrond gemaakt
+803a3f21e120e2b3e0031065c0062fe0a8e13594 be34d8b8ebf8c9246645cb70e369babf9005497d SvenPrince <sven.prince@proton.me> 1788435283 +0200	checkout: moving from 101-1-basislayout-van-beginscherm to main
+be34d8b8ebf8c9246645cb70e369babf9005497d c9d5591190cb3cae584a3d61d400f77990384360 SvenPrince <sven.prince@proton.me> 1788435291 +0200	pull origin main: Fast-forward
+c9d5591190cb3cae584a3d61d400f77990384360 803a3f21e120e2b3e0031065c0062fe0a8e13594 SvenPrince <sven.prince@proton.me> 1788435314 +0200	checkout: moving from main to 101-1-basislayout-van-beginscherm
+803a3f21e120e2b3e0031065c0062fe0a8e13594 3eb62dbe4980cea47cabd870168f468e718607d5 SvenPrince <sven.prince@proton.me> 1788435415 +0200	commit (merge): Merge main into 101-1-basislayout-van-beginscherm
+3eb62dbe4980cea47cabd870168f468e718607d5 23d877d493ac91efbabaf2cf3aa81de813b0d9e3 SvenPrince <sven.prince@proton.me> 1788438804 +0200	pull origin main: Fast-forward
+23d877d493ac91efbabaf2cf3aa81de813b0d9e3 c9d5591190cb3cae584a3d61d400f77990384360 SvenPrince <sven.prince@proton.me> 1788438854 +0200	checkout: moving from 101-1-basislayout-van-beginscherm to main
+c9d5591190cb3cae584a3d61d400f77990384360 23d877d493ac91efbabaf2cf3aa81de813b0d9e3 SvenPrince <sven.prince@proton.me> 1788438861 +0200	pull origin main: Fast-forward
+23d877d493ac91efbabaf2cf3aa81de813b0d9e3 66721e1a88bfa1b6ee51a62603a72f0525b8ec22 SvenPrince <sven.prince@proton.me> 1789635682 +0200	pull: Fast-forward
+66721e1a88bfa1b6ee51a62603a72f0525b8ec22 e0233371895489276f344d3efde5c4f5003fdef2 SvenPrince <sven.prince@proton.me> 1789636911 +0200	pull: Fast-forward
+e0233371895489276f344d3efde5c4f5003fdef2 e0233371895489276f344d3efde5c4f5003fdef2 SvenPrince <sven.prince@proton.me> 1789637679 +0200	checkout: moving from main to restaurant-reservation-table
+e0233371895489276f344d3efde5c4f5003fdef2 e0233371895489276f344d3efde5c4f5003fdef2 SvenPrince <sven.prince@proton.me> 1789637683 +0200	checkout: moving from restaurant-reservation-table to main
+e0233371895489276f344d3efde5c4f5003fdef2 e0233371895489276f344d3efde5c4f5003fdef2 SvenPrince <sven.prince@proton.me> 1789637684 +0200	reset: moving to origin/main
+e0233371895489276f344d3efde5c4f5003fdef2 e0233371895489276f344d3efde5c4f5003fdef2 SvenPrince <sven.prince@proton.me> 1789637696 +0200	checkout: moving from main to restaurant-reservation-table
+e0233371895489276f344d3efde5c4f5003fdef2 65c73f643f45e41a18f34c6a3b41734dbde859e9 SvenPrince <sven.prince@proton.me> 1789637832 +0200	commit: add res table
+65c73f643f45e41a18f34c6a3b41734dbde859e9 e0233371895489276f344d3efde5c4f5003fdef2 SvenPrince <sven.prince@proton.me> 1789638099 +0200	checkout: moving from restaurant-reservation-table to main
+e0233371895489276f344d3efde5c4f5003fdef2 e0233371895489276f344d3efde5c4f5003fdef2 SvenPrince <sven.prince@proton.me> 1789638175 +0200	checkout: moving from main to deletebestellingen
+e0233371895489276f344d3efde5c4f5003fdef2 07442e341f86f71a59e67ffb4d1d3205c21eb996 SvenPrince <sven.prince@proton.me> 1789638661 +0200	commit: removed bestellingen
+07442e341f86f71a59e67ffb4d1d3205c21eb996 e0233371895489276f344d3efde5c4f5003fdef2 SvenPrince <sven.prince@proton.me> 1789643995 +0200	checkout: moving from deletebestellingen to main
+e0233371895489276f344d3efde5c4f5003fdef2 cbca9f09d9e570ffbc14cec5232a1ae8bd1b811f SvenPrince <sven.prince@proton.me> 1789644045 +0200	pull: Fast-forward
+cbca9f09d9e570ffbc14cec5232a1ae8bd1b811f a29a809d0708dd255323f4c81914d9476b078497 SvenPrince <sven.prince@proton.me> 1789644195 +0200	checkout: moving from main to 170-siert-review-optional-improvement-to-cmakelists-make-it-so-it-looks-for-all-cpp-and-h-files-so-we-dont-have-to-add-each-new-file-manually
+a29a809d0708dd255323f4c81914d9476b078497 cbca9f09d9e570ffbc14cec5232a1ae8bd1b811f SvenPrince <sven.prince@proton.me> 1789645448 +0200	checkout: moving from 170-siert-review-optional-improvement-to-cmakelists-make-it-so-it-looks-for-all-cpp-and-h-files-so-we-dont-have-to-add-each-new-file-manually to main
+cbca9f09d9e570ffbc14cec5232a1ae8bd1b811f cbca9f09d9e570ffbc14cec5232a1ae8bd1b811f SvenPrince <sven.prince@proton.me> 1789645459 +0200	checkout: moving from main to TerrasTable
+cbca9f09d9e570ffbc14cec5232a1ae8bd1b811f 8390330105f283b893f5018a4aceb7abebe454ab SvenPrince <sven.prince@proton.me> 1789646937 +0200	commit: Plattegrond gesplit en wit gemaakt
+8390330105f283b893f5018a4aceb7abebe454ab 7eb97799d29e3a6e0d61188b2351f2cb68402edd SvenPrince <sven.prince@proton.me> 1789647193 +0200	commit: ResTable aangepast zodat het past - commentscolumn verwijderd
+7eb97799d29e3a6e0d61188b2351f2cb68402edd cbca9f09d9e570ffbc14cec5232a1ae8bd1b811f SvenPrince <sven.prince@proton.me> 1789648346 +0200	checkout: moving from TerrasTable to main
+cbca9f09d9e570ffbc14cec5232a1ae8bd1b811f 6c5a7faa96ce2f5bc765d947529801b998012aa5 SvenPrince <sven.prince@proton.me> 1789648350 +0200	pull: Fast-forward
+6c5a7faa96ce2f5bc765d947529801b998012aa5 7fa8648e0a78afd4f962377844531b81acdb0c95 SvenPrince <sven.prince@proton.me> 1789648636 +0200	pull: Fast-forward
+7fa8648e0a78afd4f962377844531b81acdb0c95 c9fed93d8cceaf7346c90bcf1edf559063682252 SvenPrince <sven.prince@proton.me> 1789648718 +0200	pull: Fast-forward
+c9fed93d8cceaf7346c90bcf1edf559063682252 c9fed93d8cceaf7346c90bcf1edf559063682252 SvenPrince <sven.prince@proton.me> 1789649015 +0200	checkout: moving from main to main
+c9fed93d8cceaf7346c90bcf1edf559063682252 c9fed93d8cceaf7346c90bcf1edf559063682252 SvenPrince <sven.prince@proton.me> 1789654600 +0200	checkout: moving from main to OutofOrderTables
+c9fed93d8cceaf7346c90bcf1edf559063682252 c9fed93d8cceaf7346c90bcf1edf559063682252 SvenPrince <sven.prince@proton.me> 1789654613 +0200	checkout: moving from OutofOrderTables to OutOfOrderTables
+c9fed93d8cceaf7346c90bcf1edf559063682252 c0ce03b525b1659a389ca263b2b400d9df80c251 SvenPrince <sven.prince@proton.me> 1789655452 +0200	commit: Enum uitgebreid table.h
+c0ce03b525b1659a389ca263b2b400d9df80c251 1496d3078a031adb2146c7b1d9e9015eff5a3cb2 SvenPrince <sven.prince@proton.me> 1789655807 +0200	commit: Terrastafels OOO gezet en select randje zwart gemaakt
+1496d3078a031adb2146c7b1d9e9015eff5a3cb2 fd524c9275ed99151346591ed2aa6df339c2e111 SvenPrince <sven.prince@proton.me> 1789656220 +0200	commit: OutofOrder knop gemaakt functional
+fd524c9275ed99151346591ed2aa6df339c2e111 14b6c00dbbf635c0014f71af65f9d78176c5d9fc SvenPrince <sven.prince@proton.me> 1789656508 +0200	commit: bug opgelost met TableCanvas import in .h
+14b6c00dbbf635c0014f71af65f9d78176c5d9fc f3b165f78121eb0fd417bcb27cfbb388ca066749 SvenPrince <sven.prince@proton.me> 1789656718 +0200	commit: Edge cases, waarschuwingen check en popups gemaakt voor out of service tafels
+f3b165f78121eb0fd417bcb27cfbb388ca066749 c9fed93d8cceaf7346c90bcf1edf559063682252 SvenPrince <sven.prince@proton.me> 1789656808 +0200	checkout: moving from OutOfOrderTables to main
+c9fed93d8cceaf7346c90bcf1edf559063682252 f3b165f78121eb0fd417bcb27cfbb388ca066749 SvenPrince <sven.prince@proton.me> 1789656849 +0200	checkout: moving from main to OutOfOrderTables
+f3b165f78121eb0fd417bcb27cfbb388ca066749 c9fed93d8cceaf7346c90bcf1edf559063682252 SvenPrince <sven.prince@proton.me> 1789656873 +0200	checkout: moving from OutOfOrderTables to main
+c9fed93d8cceaf7346c90bcf1edf559063682252 f3b165f78121eb0fd417bcb27cfbb388ca066749 SvenPrince <sven.prince@proton.me> 1789657182 +0200	checkout: moving from main to OutOfOrderTables
+f3b165f78121eb0fd417bcb27cfbb388ca066749 c9fed93d8cceaf7346c90bcf1edf559063682252 SvenPrince <sven.prince@proton.me> 1789979545 +0200	checkout: moving from OutOfOrderTables to main
+c9fed93d8cceaf7346c90bcf1edf559063682252 fef47d7fbdc2d108d00ae61bec2a07b1d35f2796 SvenPrince <sven.prince@proton.me> 1789979548 +0200	pull: Fast-forward
+fef47d7fbdc2d108d00ae61bec2a07b1d35f2796 fef47d7fbdc2d108d00ae61bec2a07b1d35f2796 SvenPrince <sven.prince@proton.me> 1789979741 +0200	checkout: moving from main to BugFixSmall
+fef47d7fbdc2d108d00ae61bec2a07b1d35f2796 368d651fb0da286559ee7de187e546e89abc8c29 SvenPrince <sven.prince@proton.me> 1789980123 +0200	commit: Text Menu weggehaald
+368d651fb0da286559ee7de187e546e89abc8c29 a99ab03dbe02b2a827912e3a5fc0e8885f531a00 SvenPrince <sven.prince@proton.me> 1789980236 +0200	commit: Remove Johans accident files
+a99ab03dbe02b2a827912e3a5fc0e8885f531a00 fef47d7fbdc2d108d00ae61bec2a07b1d35f2796 SvenPrince <sven.prince@proton.me> 1789980275 +0200	checkout: moving from BugFixSmall to main
+fef47d7fbdc2d108d00ae61bec2a07b1d35f2796 fef47d7fbdc2d108d00ae61bec2a07b1d35f2796 SvenPrince <sven.prince@proton.me> 1789988862 +0200	checkout: moving from main to main
+fef47d7fbdc2d108d00ae61bec2a07b1d35f2796 98df790e4c33f4829151ece4211a7a10ee2bfa28 SvenPrince <sven.prince@proton.me> 1789988868 +0200	pull origin main: Fast-forward
+98df790e4c33f4829151ece4211a7a10ee2bfa28 98df790e4c33f4829151ece4211a7a10ee2bfa28 SvenPrince <sven.prince@proton.me> 1789988877 +0200	checkout: moving from main to selecttabledialog
+98df790e4c33f4829151ece4211a7a10ee2bfa28 2f800491bbe83b6e8fbbd7654fa76fa9fa8e0dff SvenPrince <sven.prince@proton.me> 1789988900 +0200	commit: Add SelectTableDialog for table selection in reservations
+2f800491bbe83b6e8fbbd7654fa76fa9fa8e0dff 7c02db2c587177353f08f29048d8c50f2f9d7a9c SvenPrince <sven.prince@proton.me> 1789991025 +0200	commit (amend): Add SelectTableDialog for table selection in reservations
+7c02db2c587177353f08f29048d8c50f2f9d7a9c 98df790e4c33f4829151ece4211a7a10ee2bfa28 SvenPrince <sven.prince@proton.me> 1789991835 +0200	checkout: moving from selecttabledialog to main
+98df790e4c33f4829151ece4211a7a10ee2bfa28 0e734e341b1c38a35e3b4a22980e5aec9a6a9caa SvenPrince <sven.prince@proton.me> 1789991839 +0200	pull: Fast-forward
+0e734e341b1c38a35e3b4a22980e5aec9a6a9caa 17d2e5b4df2a9c957b9a1be4240e107a88227908 SvenPrince <sven.prince@proton.me> 1789996270 +0200	pull: Fast-forward
+17d2e5b4df2a9c957b9a1be4240e107a88227908 559d77d4670d20abfcc0c45026eac48f44eb0fcf SvenPrince <sven.prince@proton.me> 1789998179 +0200	pull: Fast-forward
+559d77d4670d20abfcc0c45026eac48f44eb0fcf d591012c77ac9bdc5986bcaafd5d797fa37d4e56 SvenPrince <sven.prince@proton.me> 1790239637 +0200	pull: Fast-forward
+d591012c77ac9bdc5986bcaafd5d797fa37d4e56 d591012c77ac9bdc5986bcaafd5d797fa37d4e56 SvenPrince <sven.prince@proton.me> 1790240945 +0200	checkout: moving from main to feature/restaurant-reservation-details
+d591012c77ac9bdc5986bcaafd5d797fa37d4e56 84e41c9f95dc202a3175166e96d0d5362584d807 SvenPrince <sven.prince@proton.me> 1790240950 +0200	commit: Add Restaurant Reservation Details dialog with search and filter
+84e41c9f95dc202a3175166e96d0d5362584d807 d591012c77ac9bdc5986bcaafd5d797fa37d4e56 SvenPrince <sven.prince@proton.me> 1790240958 +0200	checkout: moving from feature/restaurant-reservation-details to main
+d591012c77ac9bdc5986bcaafd5d797fa37d4e56 d591012c77ac9bdc5986bcaafd5d797fa37d4e56 SvenPrince <sven.prince@proton.me> 1790240961 +0200	reset: moving to origin/main
+d591012c77ac9bdc5986bcaafd5d797fa37d4e56 84e41c9f95dc202a3175166e96d0d5362584d807 SvenPrince <sven.prince@proton.me> 1790240966 +0200	checkout: moving from main to feature/restaurant-reservation-details
+84e41c9f95dc202a3175166e96d0d5362584d807 2216d0a5d5ad909a7c2fde7c457905a04063db9c SvenPrince <sven.prince@proton.me> 1790241084 +0200	commit: Added double click to open restabledetails
+2216d0a5d5ad909a7c2fde7c457905a04063db9c 0d406344cf54099eb8dce665cc1cb280e344bbad SvenPrince <sven.prince@proton.me> 1790241620 +0200	commit: Changed time from wireframe to dagdeel
+0d406344cf54099eb8dce665cc1cb280e344bbad 0693bc429906503ad9f59bcf60227f7cf8161c77 SvenPrince <sven.prince@proton.me> 1790241755 +0200	commit: Fixed small bug in displaying wrong dagdeel
+0693bc429906503ad9f59bcf60227f7cf8161c77 7a16819b363cacd048c050fb4270023815d082d5 SvenPrince <sven.prince@proton.me> 1790241998 +0200	commit: Removed Hotelkamer from columns
+7a16819b363cacd048c050fb4270023815d082d5 fa7ba644246acbc1f4a99a8e6f2b10d8ddbb9301 SvenPrince <sven.prince@proton.me> 1790242136 +0200	commit: Translated last things to English whoops
+fa7ba644246acbc1f4a99a8e6f2b10d8ddbb9301 d05b643e52a56a9d2cbf01e3e1f2d761002f4691 SvenPrince <sven.prince@proton.me> 1790242711 +0200	commit: Removed dumb reset button idea that i had
+d05b643e52a56a9d2cbf01e3e1f2d761002f4691 1d85f65f9282494ded1e1aae96086907874392da SvenPrince <sven.prince@proton.me> 1790248879 +0200	commit: Fix upcoming reservations filter to show all when no date selected
+1d85f65f9282494ded1e1aae96086907874392da d591012c77ac9bdc5986bcaafd5d797fa37d4e56 SvenPrince <sven.prince@proton.me> 1790248882 +0200	checkout: moving from feature/restaurant-reservation-details to main
+d591012c77ac9bdc5986bcaafd5d797fa37d4e56 bcd4725fe093e9308a5b6c2957331dcd6c172326 SvenPrince <sven.prince@proton.me> 1790248887 +0200	pull origin main: Fast-forward
+bcd4725fe093e9308a5b6c2957331dcd6c172326 1d85f65f9282494ded1e1aae96086907874392da SvenPrince <sven.prince@proton.me> 1790248897 +0200	checkout: moving from main to feature/restaurant-reservation-details
+1d85f65f9282494ded1e1aae96086907874392da f7f5369f6b91df0849b7166f7698515ad49431e1 SvenPrince <sven.prince@proton.me> 1790248972 +0200	commit (merge): Merge
+f7f5369f6b91df0849b7166f7698515ad49431e1 81353a17e12ad22dc6605fd8611e940c49f1d774 SvenPrince <sven.prince@proton.me> 1790249387 +0200	commit: Added HotelRooms column back in...
+81353a17e12ad22dc6605fd8611e940c49f1d774 233ac37c1a30961d014c893763e9d690dedabfed SvenPrince <sven.prince@proton.me> 1790249724 +0200	commit: Added Notes back in too...
+233ac37c1a30961d014c893763e9d690dedabfed 8f4b15cb763268b6541c3a2242ac46ad858db843 SvenPrince <sven.prince@proton.me> 1790250022 +0200	commit: fixed Notes/comments
+8f4b15cb763268b6541c3a2242ac46ad858db843 d90b7247b42d7228d2c71e064f195b9472ef8532 SvenPrince <sven.prince@proton.me> 1790251879 +0200	commit: added Reset button
+d90b7247b42d7228d2c71e064f195b9472ef8532 bcd4725fe093e9308a5b6c2957331dcd6c172326 SvenPrince <sven.prince@proton.me> 1790253238 +0200	checkout: moving from feature/restaurant-reservation-details to main
+bcd4725fe093e9308a5b6c2957331dcd6c172326 56b798725471da00e2f5138d67c880a6b712b30e SvenPrince <sven.prince@proton.me> 1790253244 +0200	pull: Fast-forward
+56b798725471da00e2f5138d67c880a6b712b30e 64935ab7b3026d334d70f49a2a6c168939d8665e SvenPrince <sven.prince@proton.me> 1790584904 +0200	pull: Fast-forward
+64935ab7b3026d334d70f49a2a6c168939d8665e 64935ab7b3026d334d70f49a2a6c168939d8665e SvenPrince <sven.prince@proton.me> 1790585737 +0200	checkout: moving from main to MainWindowIndexFix
+64935ab7b3026d334d70f49a2a6c168939d8665e 3d69da3398828676e309f13ef3b7a2c004704e58 SvenPrince <sven.prince@proton.me> 1790585963 +0200	commit: comment debug message
+3d69da3398828676e309f13ef3b7a2c004704e58 64935ab7b3026d334d70f49a2a6c168939d8665e SvenPrince <sven.prince@proton.me> 1792049110 +0200	checkout: moving from MainWindowIndexFix to main
+64935ab7b3026d334d70f49a2a6c168939d8665e 4323da09d1dc398754c5c964722cbf2f49faac47 SvenPrince <sven.prince@proton.me> 1792049115 +0200	pull: Fast-forward

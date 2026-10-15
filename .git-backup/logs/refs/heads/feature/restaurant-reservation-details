@@ -1,0 +1,14 @@
+0000000000000000000000000000000000000000 d591012c77ac9bdc5986bcaafd5d797fa37d4e56 SvenPrince <sven.prince@proton.me> 1790240945 +0200	branch: Created from HEAD
+d591012c77ac9bdc5986bcaafd5d797fa37d4e56 84e41c9f95dc202a3175166e96d0d5362584d807 SvenPrince <sven.prince@proton.me> 1790240950 +0200	commit: Add Restaurant Reservation Details dialog with search and filter
+84e41c9f95dc202a3175166e96d0d5362584d807 2216d0a5d5ad909a7c2fde7c457905a04063db9c SvenPrince <sven.prince@proton.me> 1790241084 +0200	commit: Added double click to open restabledetails
+2216d0a5d5ad909a7c2fde7c457905a04063db9c 0d406344cf54099eb8dce665cc1cb280e344bbad SvenPrince <sven.prince@proton.me> 1790241620 +0200	commit: Changed time from wireframe to dagdeel
+0d406344cf54099eb8dce665cc1cb280e344bbad 0693bc429906503ad9f59bcf60227f7cf8161c77 SvenPrince <sven.prince@proton.me> 1790241755 +0200	commit: Fixed small bug in displaying wrong dagdeel
+0693bc429906503ad9f59bcf60227f7cf8161c77 7a16819b363cacd048c050fb4270023815d082d5 SvenPrince <sven.prince@proton.me> 1790241998 +0200	commit: Removed Hotelkamer from columns
+7a16819b363cacd048c050fb4270023815d082d5 fa7ba644246acbc1f4a99a8e6f2b10d8ddbb9301 SvenPrince <sven.prince@proton.me> 1790242136 +0200	commit: Translated last things to English whoops
+fa7ba644246acbc1f4a99a8e6f2b10d8ddbb9301 d05b643e52a56a9d2cbf01e3e1f2d761002f4691 SvenPrince <sven.prince@proton.me> 1790242711 +0200	commit: Removed dumb reset button idea that i had
+d05b643e52a56a9d2cbf01e3e1f2d761002f4691 1d85f65f9282494ded1e1aae96086907874392da SvenPrince <sven.prince@proton.me> 1790248879 +0200	commit: Fix upcoming reservations filter to show all when no date selected
+1d85f65f9282494ded1e1aae96086907874392da f7f5369f6b91df0849b7166f7698515ad49431e1 SvenPrince <sven.prince@proton.me> 1790248972 +0200	commit (merge): Merge
+f7f5369f6b91df0849b7166f7698515ad49431e1 81353a17e12ad22dc6605fd8611e940c49f1d774 SvenPrince <sven.prince@proton.me> 1790249387 +0200	commit: Added HotelRooms column back in...
+81353a17e12ad22dc6605fd8611e940c49f1d774 233ac37c1a30961d014c893763e9d690dedabfed SvenPrince <sven.prince@proton.me> 1790249724 +0200	commit: Added Notes back in too...
+233ac37c1a30961d014c893763e9d690dedabfed 8f4b15cb763268b6541c3a2242ac46ad858db843 SvenPrince <sven.prince@proton.me> 1790250022 +0200	commit: fixed Notes/comments
+8f4b15cb763268b6541c3a2242ac46ad858db843 d90b7247b42d7228d2c71e064f195b9472ef8532 SvenPrince <sven.prince@proton.me> 1790251879 +0200	commit: added Reset button

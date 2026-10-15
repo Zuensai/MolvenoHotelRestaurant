@@ -1,0 +1,51 @@
+[core]
+	repositoryformatversion = 0
+	fileMode = false
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git@github.com:Team-Impact-organization/molveno-resort-systeem.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[branch "remove-molvenoHotel-map"]
+	remote = origin
+	merge = refs/heads/remove-molvenoHotel-map
+[branch "RoomViewerPagina"]
+	remote = origin
+	merge = refs/heads/RoomViewerPagina
+	vscode-merge-base = origin/main
+[branch "SearchRoomsCorrectly"]
+	remote = origin
+	merge = refs/heads/SearchRoomsCorrectly
+[branch "BugFix"]
+	remote = origin
+	merge = refs/heads/BugFix
+[branch "101-1-basislayout-van-beginscherm"]
+	remote = origin
+	merge = refs/heads/101-1-basislayout-van-beginscherm
+[branch "restaurant-reservation-table"]
+	remote = origin
+	merge = refs/heads/restaurant-reservation-table
+[branch "deletebestellingen"]
+	remote = origin
+	merge = refs/heads/deletebestellingen
+[branch "170-siert-review-optional-improvement-to-cmakelists-make-it-so-it-looks-for-all-cpp-and-h-files-so-we-dont-have-to-add-each-new-file-manually"]
+	remote = origin
+	merge = refs/heads/170-siert-review-optional-improvement-to-cmakelists-make-it-so-it-looks-for-all-cpp-and-h-files-so-we-dont-have-to-add-each-new-file-manually
+[branch "TerrasTable"]
+	remote = origin
+	merge = refs/heads/TerrasTable
+[branch "BugFixSmall"]
+	remote = origin
+	merge = refs/heads/BugFixSmall
+[branch "selecttabledialog"]
+	remote = origin
+	merge = refs/heads/selecttabledialog
+[branch "feature/restaurant-reservation-details"]
+	remote = origin
+	merge = refs/heads/feature/restaurant-reservation-details
+[branch "MainWindowIndexFix"]
+	remote = origin
+	merge = refs/heads/MainWindowIndexFix

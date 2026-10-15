@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 98df790e4c33f4829151ece4211a7a10ee2bfa28 SvenPrince <sven.prince@proton.me> 1789988877 +0200	branch: Created from HEAD
+98df790e4c33f4829151ece4211a7a10ee2bfa28 2f800491bbe83b6e8fbbd7654fa76fa9fa8e0dff SvenPrince <sven.prince@proton.me> 1789988900 +0200	commit: Add SelectTableDialog for table selection in reservations
+2f800491bbe83b6e8fbbd7654fa76fa9fa8e0dff 7c02db2c587177353f08f29048d8c50f2f9d7a9c SvenPrince <sven.prince@proton.me> 1789991025 +0200	commit (amend): Add SelectTableDialog for table selection in reservations

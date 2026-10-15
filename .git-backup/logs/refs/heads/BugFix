@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 be34d8b8ebf8c9246645cb70e369babf9005497d SvenPrince <sven.prince@proton.me> 1787923505 +0200	branch: Created from main
+be34d8b8ebf8c9246645cb70e369babf9005497d 23ab9a19c76523e116429f7b4db96280f05957b4 SvenPrince <sven.prince@proton.me> 1787923873 +0200	commit: Fixed lakeview bug in room.h
+23ab9a19c76523e116429f7b4db96280f05957b4 810a30194bfdc7d04c54d6a1d2403c17e28a06f0 SvenPrince <sven.prince@proton.me> 1787924142 +0200	commit: Fixed CheckIfFileOpens mismatch
